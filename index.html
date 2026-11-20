@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DravetGuard 夜间交接</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head><body>
+<header><div><small>DRAVETGUARD · 1.0 工程版</small><h1>夜间记录与交接</h1><p>自动任务有迹可循，需要处理的事清楚可见。</p></div><span id="connection">等待连接</span></header>
+<main><section class="login"><label>家长访问码<input id="token" type="password" autocomplete="off" placeholder="runtime/parent-token.txt"></label><button id="connect">连接工作台</button><span>仅保存在当前页面内存，刷新后重新输入。</span></section>
+<p class="notice">本工作台不诊断发作。腕表交替测量存在空窗；没有提醒不表示安全。当前跟进只写入工作台收件箱，不代表手机通知已送达。</p>
+<section class="stats" id="stats"></section><section class="controls"><button id="pause">暂停AI跟进</button><label><input id="consent" type="checkbox">允许后台将事件摘要、观察备注和任务状态发送给豆包处理（可撤回）</label><button id="demo">创建合成演练事件</button><button id="refresh">刷新</button></section>
+<section><h2>采集状态</h2><p id="session">尚无手机采集会话</p><p id="freshness"></p></section>
+<section><h2>待处理与交接</h2><p>优先显示未完成事项。已收到、接手与完成分别记录；只有人工明确提交结果才能完成。</p><div id="tasks"></div></section>
+<section><h2>处理证据</h2><div id="audit"></div></section><p id="error" role="alert"></p></main>
+</body></html>

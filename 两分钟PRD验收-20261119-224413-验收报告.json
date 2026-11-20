@@ -1,0 +1,130 @@
+{
+  "run_id": "20261119-224413",
+  "is_simulated": true,
+  "real_seconds": 120.18799999999464,
+  "interval_seconds": 10,
+  "scheduled_ticks": 12,
+  "valid_samples": 11,
+  "missing_ticks": 1,
+  "checks": [
+    {
+      "name": "S8重复事件不重复任务",
+      "result": "PASS",
+      "detail": "",
+      "at": "2026-11-19T14:44:53.886530+00:00"
+    },
+    {
+      "name": "S5收到不等于完成",
+      "result": "PASS",
+      "detail": "",
+      "at": "2026-11-19T14:45:13.931542+00:00"
+    },
+    {
+      "name": "S6观察结论独立保存",
+      "result": "PASS",
+      "detail": "",
+      "at": "2026-11-19T14:45:13.933583+00:00"
+    },
+    {
+      "name": "S4中断不清除L3",
+      "result": "PASS",
+      "detail": "",
+      "at": "2026-11-19T14:45:33.856607+00:00"
+    },
+    {
+      "name": "恢复数值后仍保留警告",
+      "result": "PASS",
+      "detail": "",
+      "at": "2026-11-19T14:45:43.847487+00:00"
+    },
+    {
+      "name": "S3授权备用仅一次升级",
+      "result": "PASS",
+      "detail": "",
+      "at": "2026-11-19T14:46:13.956529+00:00"
+    },
+    {
+      "name": "L1L2L3全部由原版规则触发",
+      "result": "PASS",
+      "detail": "",
+      "at": "2026-11-19T14:46:14.018891+00:00"
+    },
+    {
+      "name": "全部解除有时间操作者与结果",
+      "result": "PASS",
+      "detail": "",
+      "at": "2026-11-19T14:46:14.018891+00:00"
+    },
+    {
+      "name": "S7模拟通知失败可见",
+      "result": "PASS",
+      "detail": "",
+      "at": "2026-11-19T14:46:14.018891+00:00"
+    }
+  ],
+  "summary": [
+    {
+      "condition_ended_at": "2026-11-19T14:44:43.824993+00:00",
+      "condition_started_at": "2026-11-19T14:44:23.824993+00:00",
+      "event_id": "587177e7-e264-4eb5-84b4-a83a3a738f23",
+      "is_demo": true,
+      "level": 1,
+      "peak_value": 120,
+      "source": "synthetic",
+      "triggered_at": "2026-11-19T14:44:33.824993+00:00",
+      "task_id": "9e3c5583-0015-4109-9162-ccf974e88f77",
+      "state": "RESOLVED",
+      "owner": "primary",
+      "resolved_at": "2026-11-19T14:44:43.860536+00:00",
+      "outcome": "预设虚构照护者明确提交完成及处理结果；非真实患者照护",
+      "condition_duration_seconds": 20.0,
+      "alarm_duration_seconds": 10.035543203353882
+    },
+    {
+      "condition_ended_at": "2026-11-19T14:45:03.824993+00:00",
+      "condition_started_at": "2026-11-19T14:44:43.824993+00:00",
+      "event_id": "3a567b1c-0adf-40c2-be7b-781cfd606b12",
+      "is_demo": true,
+      "level": 2,
+      "peak_value": 135,
+      "source": "synthetic",
+      "triggered_at": "2026-11-19T14:44:53.824993+00:00",
+      "task_id": "3e680e59-04b0-4e66-9a30-bd835a88f275",
+      "state": "RESOLVED",
+      "owner": "primary",
+      "resolved_at": "2026-11-19T14:45:23.855874+00:00",
+      "outcome": "预设虚构照护者明确提交完成及处理结果；非真实患者照护",
+      "condition_duration_seconds": 20.0,
+      "alarm_duration_seconds": 30.03088116645813
+    },
+    {
+      "condition_ended_at": "2026-11-19T14:45:23.824993+00:00",
+      "condition_started_at": "2026-11-19T14:45:03.824993+00:00",
+      "event_id": "227713ae-9b20-4a38-9baf-c557b90855a4",
+      "is_demo": true,
+      "level": 3,
+      "peak_value": 158,
+      "source": "synthetic",
+      "triggered_at": "2026-11-19T14:45:13.824993+00:00",
+      "task_id": "27788f07-29ba-49c6-aff9-fa46a3cc5afd",
+      "state": "RESOLVED",
+      "owner": "backup",
+      "resolved_at": "2026-11-19T14:46:13.968079+00:00",
+      "outcome": "预设虚构照护者明确提交完成及处理结果；非真实患者照护",
+      "condition_duration_seconds": 20.0,
+      "alarm_duration_seconds": 60.143086194992065
+    }
+  ],
+  "unit_tests": {
+    "returncode": 0,
+    "output": "test_S1_no_event_no_task (test_prd.PRDChecks) ... ok\ntest_S2_base_before_ai_and_bounded_followup (test_prd.PRDChecks) ... ok\ntest_S3_backup_authorized_once (test_prd.PRDChecks) ... ok\ntest_S3_early_or_unauthorized_backup_rejected (test_prd.PRDChecks) ... ok\ntest_S4_link_loss_preserves_alarm (test_prd.PRDChecks) ... ok\ntest_S5_ack_is_not_completion (test_prd.PRDChecks) ... ok\ntest_S5_explicit_completion_and_summary (test_prd.PRDChecks) ... ok\ntest_S6_observation_is_independent (test_prd.PRDChecks) ... ok\ntest_S7_invalid_policy_reference_and_action_rejected (test_prd.PRDChecks) ... ok\ntest_S7_notification_failure_visible (test_prd.PRDChecks) ... ok\ntest_S7_three_model_failures_handoff (test_prd.PRDChecks) ... ok\ntest_S8_duplicate_restart_pause (test_prd.PRDChecks) ... ok\ntest_role_and_policy_approval_rollback (test_prd.PRDChecks) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 1.609s\n\nOK\n",
+    "uses_explicit_test_doubles": true
+  },
+  "llm_calls_this_run": 0,
+  "notes": [
+    "故障场景为模拟注入，不是真实设备断线",
+    "本轮不验证模型语义质量；此前真实豆包证据独立保留",
+    "真实手机/硬件/临床性能未测试",
+    "文档关键S1-S8及权限/策略边界已列项；不能穷举所有可能输入"
+  ]
+}
